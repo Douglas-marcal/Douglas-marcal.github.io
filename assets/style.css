@@ -3,6 +3,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;1,300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Ubuntu:ital,wght@0,300;1,300&display=swap');
 
+body {
+    background-image: linear-gradient(to right, #272932, #040404);
+}
+
 h1 {
     font-family: 'Open Sans', sans-serif;
 }
