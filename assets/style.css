@@ -20,6 +20,19 @@ h1 {
     text-align: center;
 }
 
+nav {
+    background-color: aquamarine;
+}
+
+.nav-bar {
+    list-style: none;
+    text-align: end;
+}
+
+.nav-bar li {
+    display: inline-block;
+}
+
 p {
     font-family: 'Ubuntu', sans-serif;
 }
@@ -29,6 +42,5 @@ p {
 }
 
 .photo {
-    
     text-align: center;
 }
