@@ -21,7 +21,7 @@ h1 {
 }
 
 nav {
-    background-color: aquamarine;
+    background-color: #272932;
 }
 
 .nav-bar {
@@ -31,6 +31,10 @@ nav {
 
 .nav-bar li {
     display: inline-block;
+    padding: 10px 20px;
+    margin: 5px 5px;
+    background-color: chartreuse;
+    border-radius: 6px;
 }
 
 p {
