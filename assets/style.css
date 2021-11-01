@@ -24,13 +24,22 @@ h1 {
     padding: 20px 0px 0px;
 }
 
-nav {
+nav, #contacts {
     background-color: #272932;
 }
-
-.nav-bar {
+li {
     list-style: none;
+}
+.nav-bar {
     text-align: end;
+}
+
+.nav-bar li, .social-media li {
+    display: inline-block;
+}
+
+.nav-bar li, #contacts {
+    color: #FAF6F6;
 }
 
 .nav-bar li {
@@ -49,9 +58,34 @@ nav {
     color: #040404;
 }
 
-p {
+.responsive {
+    width: 95%;
+    height: auto;
+}
+
+#about-me, #contacts, #my-skills {
     font-family: 'Ubuntu', sans-serif;
 }
+
+#about-me {
+    
+    max-width: 70%;
+    text-align: justify;
+    margin: 30px auto;
+    
+}
+
+#about-me a {
+    text-decoration: none;
+    font-weight: 600;
+    color: #040404;
+}
+
+#about-me a:hover {
+    background-color: #73E161;
+    
+}
+
 
 .emphasis {
     font-size: 1.3em;
@@ -59,4 +93,43 @@ p {
 
 .photo {
     text-align: center;
+}
+
+.padding-left {
+    padding-left: 0;
+}
+
+#list {
+    width: fit-content;
+    text-align: justify;
+    margin: auto;
+}
+
+#contacts {
+    background-color: #272932;
+    text-align: center;
+}
+
+#contacts h3 {
+    padding: 30px 0px;
+}
+
+.social-media li {
+    padding: 30px 40px;
+}
+
+.social-media li:nth-child(1)::before{
+    content: url(https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg);
+}
+
+.social-media li:nth-child(2)::before {
+    content: url(https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg);
+}
+
+.social-media li:nth-child(3)::before {
+    content: url(instagram.svg);
+}
+
+.social-media li:nth-child(4)::before {
+    content: url(gmail.svg);
 }
