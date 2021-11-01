@@ -40,6 +40,8 @@ nav {
     color: #FAF6F6;
     background-color: #040404;
     border-radius: 6px;
+    transition-duration: 700ms;
+    font-weight: 600;
 }
 
 .nav-bar li:hover {
