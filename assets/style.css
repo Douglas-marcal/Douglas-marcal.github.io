@@ -27,15 +27,18 @@ h1 {
 nav, #contacts {
     background-color: #272932;
 }
-li {
+
+.nav-bar li, #my-skills li, #contacts li {
     list-style: none;
 }
+
 .nav-bar {
     text-align: end;
 }
 
-.nav-bar li, .social-media li {
-    display: inline-block;
+.social-media {
+    display: flex;
+    justify-content: center;
 }
 
 .nav-bar li, #contacts {
@@ -68,11 +71,9 @@ li {
 }
 
 #about-me {
-    
     max-width: 70%;
     text-align: justify;
     margin: 30px auto;
-    
 }
 
 #about-me a {
@@ -85,7 +86,6 @@ li {
     background-color: #73E161;
     
 }
-
 
 .emphasis {
     font-size: 1.3em;
@@ -106,7 +106,6 @@ li {
 }
 
 #contacts {
-    background-color: #272932;
     text-align: center;
 }
 
@@ -114,22 +113,48 @@ li {
     padding: 30px 0px;
 }
 
-.social-media li {
-    padding: 30px 40px;
+.social-media a li {
+    padding: 30px 30px;
+    margin: 0px 20px 20px;
 }
 
-.social-media li:nth-child(1)::before{
-    content: url(https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg);
+.social-media a li {
+    width: fit-content;
 }
 
-.social-media li:nth-child(2)::before {
-    content: url(https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg);
+.social-media a:nth-child(1) li{
+    background: url(https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg) no-repeat;
 }
 
-.social-media li:nth-child(3)::before {
-    content: url(instagram.svg);
+
+.social-media a:nth-child(2) li{
+    background: url(https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg) no-repeat;
 }
 
-.social-media li:nth-child(4)::before {
-    content: url(gmail.svg);
+.social-media a:nth-child(3) li {
+    background: url(instagram.svg) no-repeat;
 }
+
+.social-media a:nth-child(4) li {
+    background: url(gmail.svg) no-repeat;
+} 
+
+.social-media a:nth-child(1) li:hover {
+    background-color: #FAF6F6;
+    border-radius: 50%;
+}
+
+ 
+.social-media a:nth-child(2) li:hover {
+    background-color: #FAF6F6;
+    border-radius: 2px;
+}
+
+.social-media a:nth-child(3) li:hover {
+    background-color: #FAF6F6;
+    border-radius: 50%;
+}
+
+.social-media a:nth-child(4) li:hover {
+    background-color: #22242b;
+} 
