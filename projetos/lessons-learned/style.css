@@ -1,0 +1,114 @@
+body {
+  background-color: rgb(253, 251, 251);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#cabecalho {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: rgb(84, 84, 84);
+  width: 100%;
+  z-index: 3;
+  box-shadow: 2px 2px 15px 2px black;
+}
+
+#cabecalho h1 {
+  font-size: 2.2em;
+}
+
+#cabecalho , #foto_e_listas , #identificacao , #artigo_e_passagem , #rodape {
+  text-align: center;
+}
+
+div #licoes_aprendidas , div #licoes_a_aprender {
+  text-align: start;
+}
+
+#barra_navegacao a , #barra_navegacao ul li {
+  padding: 10px;
+}
+
+#cabecalho , #barra_navegacao ul li a {
+  color: rgb(236, 226, 208);
+  text-decoration: none;
+}
+
+#barra_navegacao ul li , #identificacao , #listas , #listas div {
+  display: inline-block;
+}
+
+#barra_navegacao ul li {
+  background-color: rgb(105, 116, 124);
+  border-radius: 6px;
+  transition-duration: 400ms;
+  margin: 0 5px 0 0;
+}
+
+#barra_navegacao ul li:hover {
+  background-color: rgb(71, 69, 69);
+}
+
+#minha_foto {
+  width: 300px;
+}
+
+#identificacao {
+  margin: 140px 0 0;
+  max-width: 23%;
+}
+
+#identificacao h2 {
+  margin: 0;
+}
+
+#listas div {
+  background-color: royalblue;
+  position: relative;
+  top: -200px;
+  margin: 0 30px;
+  padding: 20px;
+  border: 2px solid red;
+  border-radius: 20px;
+}
+
+#listas div:nth-child( 1 ) , #listas div:nth-child( 2 ) {
+  box-shadow: 4px 5px 20px 15px rgb(63, 57, 57);
+}
+
+.lado-direito , .lado-esquerdo {
+  display: inline-block;
+  padding: 10px;
+  background-color: rgb(236, 226, 208);
+  border-radius: 10px;
+  line-height: 1.6;
+}
+
+.lado-esquerdo {
+  width: 65%;
+}
+
+.lado-direito {
+  width: 25%;
+  margin: 0 0 0 20px;
+  position: relative;
+  bottom: 20px;
+}
+
+.lado-esquerdo p , .lado-direito p {
+  text-align: justify;
+}
+
+#rodape {
+  margin: 70px 0;
+}
+
+#tabela_redes_sociais {
+  width: 50%;
+  text-align: center;
+  margin: 25px auto;
+  border: 1px solid black;
+  border-radius: 20px;
+  box-shadow: 3px 6px 10px 20px rgba(0, 0, 0, 0.541);
+}
