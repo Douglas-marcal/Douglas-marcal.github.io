@@ -5,9 +5,58 @@
 
 /* 040404 - 272932 - 73E161 - FAF6F6 */
 
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: 'Open Sans', sans-serif;
+}
+
+header , nav {
+  /* background-color: aquamarine; */
+  /* background-image: linear-gradient(to right, rgb(39, 41, 50), rgb(4, 4, 4)); */
+  background-color: rgb(4, 4, 4);
+  min-height: 8vh;
+}
+
+header , #greeting {
+  color: rgb(250, 246, 246);
+}
+
+nav ul li {
+  background-color: rgb(250, 246, 246);
+  color: black;
+}
+
+header , nav , #greeting {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+header , #greeting {
+  text-align: center;
+}
+
+nav {
+  position: sticky;
+  top: 0;
+  box-shadow: 0 2px 2px  rgb(115, 225, 97);
+  z-index: 3;
+}
+
+#greeting {
+  min-height: 84vh;
+  background-color: rgb(39, 41, 50);
+}
+
+/* refatorando */
 body {
-    background-image: linear-gradient(#272932, #040404);
-    margin: 0;
+  
+  margin: 0;
 }
 
 #container {
@@ -16,16 +65,6 @@ body {
     margin: auto;
     box-shadow: 5px 10px 8px 10px #73E161;
     border-radius: 10px;
-}
-
-h1 {
-    font-family: 'Open Sans', sans-serif;
-    text-align: center;
-    padding: 20px 0px 0px;
-}
-
-nav, #contacts {
-    background-color: #272932;
 }
 
 .nav-bar li, #my-skills li, #contacts li {
@@ -41,16 +80,12 @@ nav, #contacts {
     justify-content: center;
 }
 
-.nav-bar li, #contacts {
-    color: #FAF6F6;
-}
-
 .nav-bar li {
     display: inline-block;
     padding: 10px 20px;
     margin: 5px 5px;
-    color: #FAF6F6;
-    background-color: #040404;
+    /* color: #FAF6F6; */
+    /* background-color: #040404; */
     border-radius: 6px;
     transition-duration: 700ms;
     font-weight: 600;
@@ -66,9 +101,7 @@ nav, #contacts {
     height: auto;
 }
 
-#about-me, #contacts, #my-skills {
-    font-family: 'Ubuntu', sans-serif;
-}
+
 
 #about-me {
     max-width: 70%;
