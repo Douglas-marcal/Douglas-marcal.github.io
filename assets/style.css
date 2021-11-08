@@ -1,5 +1,5 @@
 @charset "UTF-8";
-
+/* https://www.iconfinder.com/search?q=laptop&price=free */
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;1,300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Ubuntu:ital,wght@0,300;1,300&display=swap');
 
@@ -8,6 +8,7 @@
 * {
   margin: 0;
   padding: 0;
+  text-decoration: none;
 }
 
 html {
@@ -16,8 +17,6 @@ html {
 }
 
 header , nav {
-  /* background-color: aquamarine; */
-  /* background-image: linear-gradient(to right, rgb(39, 41, 50), rgb(4, 4, 4)); */
   background-color: rgb(4, 4, 4);
   min-height: 8vh;
 }
@@ -26,9 +25,12 @@ header , #greeting {
   color: rgb(250, 246, 246);
 }
 
-nav ul li {
+nav ul li a {
   background-color: rgb(250, 246, 246);
   color: black;
+  border-radius: 5px;
+  padding: 8px;
+  margin: 0 5px 0;
 }
 
 header , nav , #greeting {
@@ -51,6 +53,7 @@ nav {
 #greeting {
   min-height: 84vh;
   background-color: rgb(39, 41, 50);
+  font-size: 2em;
 }
 
 /* refatorando */
@@ -82,8 +85,6 @@ body {
 
 .nav-bar li {
     display: inline-block;
-    padding: 10px 20px;
-    margin: 5px 5px;
     /* color: #FAF6F6; */
     /* background-color: #040404; */
     border-radius: 6px;
@@ -91,10 +92,10 @@ body {
     font-weight: 600;
 }
 
-.nav-bar li:hover {
+/* .nav-bar li:hover {
     background-color: #FAF6F6;
     color: #040404;
-}
+} */
 
 .responsive {
     width: 95%;
@@ -142,14 +143,14 @@ body {
     text-align: center;
 }
 
-#contacts h3 {
+/* #contacts h3 {
     padding: 30px 0px;
 }
 
 .social-media a li {
     padding: 30px 30px;
     margin: 0px 20px 20px;
-}
+} */
 
 .social-media a li {
     width: fit-content;
