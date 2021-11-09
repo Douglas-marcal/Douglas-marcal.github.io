@@ -1,14 +1,135 @@
 @charset "UTF-8";
-
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;1,300&display=swap');
+/* https://www.iconfinder.com/search?q=laptop&price=free */
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Ubuntu:ital,wght@0,300;1,300&display=swap');
 
 /* 040404 - 272932 - 73E161 - FAF6F6 */
 
-body {
-    background-image: linear-gradient(#272932, #040404);
-    margin: 0;
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
 }
+
+html {
+  scroll-behavior: smooth;
+  font-family: 'Open Sans', sans-serif;
+}
+
+header , nav {
+  background-color: rgb(4, 4, 4);
+  min-height: 8vh;
+  min-width: 360px;
+}
+
+header , #greeting {
+  color: rgb(250, 246, 246);
+}
+
+nav ul li a {
+  background-color: rgb(250, 246, 246);
+  color: black;
+  border-radius: 5px;
+  padding: 5px;
+  margin: 0 5px 0;
+}
+
+header , nav , #greeting {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+header , #greeting {
+  text-align: center;
+}
+
+nav {
+  position: sticky;
+  top: 0;
+  box-shadow: 0 2px 2px  rgb(115, 225, 97);
+  z-index: 3;
+}
+
+.nav-bar li {
+  display: inline-block;
+  border-radius: 6px;
+  font-weight: 600;
+}
+
+#greeting {
+  min-height: 84vh;
+  background-color: rgb(39, 41, 50);
+  font-size: 2em;
+}
+
+.photo-and-about {
+  min-height: 100vh;
+  text-align: center;
+  background-color: rgb(4, 4, 4);
+}
+
+.photo-and-about a , .photo-and-about {
+  color: rgb(250, 246, 246);
+}
+
+.photo-and-about img {
+  width: 200px;
+  padding: 100px 0 0 0;
+}
+
+.photo-and-about p {
+  max-width: 60%;
+  text-align: justify;
+}
+
+#my-skills {
+  min-height: 100vh;
+  background-color: rgb(34, 36, 43);
+}
+
+#title-my-skills {
+  padding-top: 100px;
+  text-align: center;
+  color: rgb(250, 246, 246);
+  font-size: 1.5em;
+}
+
+.margin-50-auto {
+  margin: 50px auto;
+}
+
+#list-skills {
+  width: 300px;
+  text-align: center;
+}
+
+#list-skills li {
+  display: inline-block;
+  width: fit-content;
+  padding: 15px;
+}
+
+#list-skills li:nth-child(1) {
+  content: url(https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-plain-wordmark.svg);
+  width: 100px;
+}
+
+#list-skills li:nth-child(2) {
+  content: url(https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-plain-wordmark.svg);
+  width: 100px;
+}
+
+#list-skills li:nth-child(3) {
+  content: url(https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-plain-wordmark.svg);
+  width: 100px;
+}
+
+#list-skills li:nth-child(4) {
+  content: url(https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg);
+  width: 100px;
+}
+
+/* refatorando */
 
 #container {
     max-width: 900px;
@@ -18,22 +139,8 @@ body {
     border-radius: 10px;
 }
 
-h1 {
-    font-family: 'Open Sans', sans-serif;
-    text-align: center;
-    padding: 20px 0px 0px;
-}
-
-nav, #contacts {
-    background-color: #272932;
-}
-
-.nav-bar li, #my-skills li, #contacts li {
+.nav-bar li, #list-skills li, #contacts li {
     list-style: none;
-}
-
-.nav-bar {
-    text-align: end;
 }
 
 .social-media {
@@ -41,81 +148,23 @@ nav, #contacts {
     justify-content: center;
 }
 
-.nav-bar li, #contacts {
-    color: #FAF6F6;
-}
-
-.nav-bar li {
-    display: inline-block;
-    padding: 10px 20px;
-    margin: 5px 5px;
-    color: #FAF6F6;
-    background-color: #040404;
-    border-radius: 6px;
-    transition-duration: 700ms;
-    font-weight: 600;
-}
-
-.nav-bar li:hover {
+/* .nav-bar li:hover {
     background-color: #FAF6F6;
     color: #040404;
-}
-
-.responsive {
-    width: 95%;
-    height: auto;
-}
-
-#about-me, #contacts, #my-skills {
-    font-family: 'Ubuntu', sans-serif;
-}
-
-#about-me {
-    max-width: 70%;
-    text-align: justify;
-    margin: 30px auto;
-}
+} */
 
 #about-me a {
-    text-decoration: none;
-    font-weight: 600;
-    color: #040404;
+   text-decoration: none;
+   font-weight: 600;
+    /* color: #040404; */
 }
 
 #about-me a:hover {
-    background-color: #73E161;
-    
-}
-
-.emphasis {
-    font-size: 1.3em;
-}
-
-.photo {
-    text-align: center;
-}
-
-.padding-left {
-    padding-left: 0;
-}
-
-#list {
-    width: fit-content;
-    text-align: justify;
-    margin: auto;
+  background-color: #73E161;
 }
 
 #contacts {
     text-align: center;
-}
-
-#contacts h3 {
-    padding: 30px 0px;
-}
-
-.social-media a li {
-    padding: 30px 30px;
-    margin: 0px 20px 20px;
 }
 
 .social-media a li {
