@@ -192,7 +192,7 @@ nav {
 
 @media (min-width: 1024px) {
   nav ul li a {
-    transition: 400ms;
+    transition: 600ms;
     padding: 15px;
   }
 
