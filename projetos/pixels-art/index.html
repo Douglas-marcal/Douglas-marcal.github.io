@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pixels Art</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1 id="title">Paleta de Cores</h1>
+  <div id="color-palette">
+    <div id="black" class="color border selected"></div>
+    <div id="red" class="color border"></div>
+    <div id="blue" class="color border"></div>
+    <div id="yellow" class="color border"></div>
+  </div>
+  <div id="buttons">
+    <button id="new-colors" class="btn">Gerar novas cores</button>
+    <button id="clear-board" class="btn">Limpar</button><br>
+    <label for="board-size" class="font-label">Valores entre 5 e 50:</label>
+    <input name="number" type="number" id="board-size" class="margin-top" required min="1" min="5" max="50">
+    <button type="submit" id="generate-board" class="btn margin-top">VQV</button>
+  </div>
+  <div id="pixel-board"></div>
+  <script src="script.js"></script>
+</body>
+</html>
