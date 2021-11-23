@@ -148,6 +148,20 @@ nav {
   text-align: center;
 }
 
+.pixels-art {
+  width: fit-content;
+  margin: auto;
+}
+
+.pixels-art:hover {
+  box-shadow: 2px 5px 10px rgba(255, 255, 255, 0.562);
+}
+
+.pixels-art img {
+  /* display: block; */
+  width: 200px;
+}
+
 #projects p {
   justify-self: center;
 }
