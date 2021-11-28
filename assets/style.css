@@ -134,11 +134,7 @@ nav {
   width: 100px;
 }
 
-#projects {
-  min-height: 100vh;
-  background-color: rgb(4, 4, 4);
-  color: white;
-}
+/* 
 
 #projects div {
   padding-top: 8vh;
@@ -155,9 +151,6 @@ nav {
   box-shadow: 2px 5px 10px rgba(255, 255, 255, 0.562);
 }
 
-.pages-project img {
-  width: 150px;
-}
 
 .pages {
   flex-direction: row;
@@ -167,6 +160,29 @@ nav {
 
 #projects p {
   justify-self: center;
+} */
+
+#projects {
+  min-height: 100vh;
+  background-color: rgb(4, 4, 4);
+  color: white;
+}
+
+.projects-container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.pages-project img {
+  width: 150px;
+}
+
+.pages-project {
+  vertical-align: middle;
+  margin: 20px;
 }
 
 #contacts {
