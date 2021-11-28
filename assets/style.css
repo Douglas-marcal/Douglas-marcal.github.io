@@ -143,23 +143,26 @@ nav {
 #projects div {
   padding-top: 8vh;
   display: flex;
-  height: calc(100vh - 8vh);
   flex-direction: column;
   text-align: center;
 }
 
-.pixels-art {
+.pages-project {
   width: fit-content;
-  margin: auto;
 }
 
-.pixels-art:hover {
+.pages-project:hover {
   box-shadow: 2px 5px 10px rgba(255, 255, 255, 0.562);
 }
 
-.pixels-art img {
-  /* display: block; */
-  width: 200px;
+.pages-project img {
+  width: 150px;
+}
+
+.pages {
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
 
 #projects p {
