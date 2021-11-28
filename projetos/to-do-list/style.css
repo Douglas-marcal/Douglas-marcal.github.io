@@ -1,0 +1,41 @@
+.selecionado {
+  background-color: gray;
+}
+
+.completed {
+  text-decoration: line-through solid black;
+}
+
+ol li {
+  list-style: none;
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+li:hover {
+  box-shadow: 5px 2px 10px black;
+  background-color: rgba(185 , 177 , 177 , 0.534);
+  cursor: pointer;
+}
+
+body {
+  max-width: 1200px;
+  margin: auto;
+}
+
+@media ( min-width : 580px ) and ( max-width : 1400px ) {
+
+  body {
+    max-width: 70%;
+    margin: auto;
+  }
+}
+
+@media ( min-width : 320px ) and ( max-width : 579px ) {
+
+  body {
+    max-width: 95%;
+    margin: auto;
+  }
+}
