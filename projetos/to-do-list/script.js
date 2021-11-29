@@ -8,23 +8,35 @@ const botaoMoverParaCima = document.querySelector('#mover-cima');
 const botaoApagaSelecionados = document.querySelector('#remover-selecionado');
 const textoTarefa = document.querySelector('#texto-tarefa');
 
-function adicionaTarefa() {
-  const textoDaTarefa = document.querySelector('#texto-tarefa');
+function criaElementoLi() {
   const itemDaLista = document.createElement('li');
-  itemDaLista.textContent = textoDaTarefa.value;
-  itemDaLista.classList.add('mb-2');
+  itemDaLista.textContent = textoTarefa.value;
+  itemDaLista.classList.add('list-group-item');
   listaOrdenada.appendChild(itemDaLista);
-  textoDaTarefa.value = '';
+}
+
+function capturaItemSelecionado() {
+  const itemSelecionado = document.querySelector('.selecionado');
+  return itemSelecionado;
+}
+
+function adicionaTarefa() {
+  if (textoTarefa.value.trim() !== '') {
+    criaElementoLi();
+    textoTarefa.value = '';
+  } else {
+    // const myModal = document.querySelector('div.modal');
+    // const objModal = new bootstrap.Modal(myModal);
+    // objModal.show();
+    alert('Campo de texto vazio!');
+  }
 }
 
 botaoCriarTarefa.addEventListener('click', adicionaTarefa);
 
 function adicionaTarefaComEnter(event) {
-  if (event.key === 'Enter') {
-    const itemDaLista = document.createElement('li');
-    itemDaLista.textContent = textoTarefa.value;
-    itemDaLista.classList.add('mb-2');
-    listaOrdenada.appendChild(itemDaLista);
+  if (textoTarefa.value.trim() !== '' && event.key === 'Enter') {
+    criaElementoLi();
     textoTarefa.value = '';
   }
 }
@@ -32,11 +44,11 @@ function adicionaTarefaComEnter(event) {
 textoTarefa.addEventListener('keyup', adicionaTarefaComEnter);
 
 function destacaItemSelecionado(event) {
-  const removeCorDoElementoAnterior = document.querySelector('.selecionado');
+  const itemSelecionado = capturaItemSelecionado();
   const elementoClicado = event.target;
   if (elementoClicado.id !== 'lista-tarefas') {
-    if (removeCorDoElementoAnterior !== null) {
-      removeCorDoElementoAnterior.classList.remove('selecionado');
+    if (itemSelecionado !== null) {
+      itemSelecionado.classList.remove('selecionado');
       elementoClicado.classList.add('selecionado');
     } else {
       elementoClicado.classList.add('selecionado');
@@ -73,22 +85,21 @@ function removeFinalizados() {
 botaoApagaFinalizados.addEventListener('click', removeFinalizados);
 
 function salvarTarefas() {
-  const listaDeTarefasParaSalvar = document.querySelector('#lista-tarefas');
-  const tarefasSalvas = (JSON.stringify(listaDeTarefasParaSalvar.innerHTML));
-  localStorage.setItem('tarefas', tarefasSalvas);
+  const listaDeTarefasParaSalvar = document.querySelector('#lista-tarefas').innerHTML;
+  localStorage.setItem('tarefas', listaDeTarefasParaSalvar);
 }
 
 botaoSalvarTarefas.addEventListener('click', salvarTarefas);
 
-const capturaTarefasSalvasNoLocalStorage = localStorage.getItem('tarefas');
-listaOrdenada.innerHTML = JSON.parse(capturaTarefasSalvasNoLocalStorage);
+function aparecerListaSalva() {
+  const capturaTarefasSalvasNoLocalStorage = localStorage.getItem('tarefas');
+  listaOrdenada.innerHTML = capturaTarefasSalvasNoLocalStorage;
+}
+
+aparecerListaSalva();
 
 // https://www.ti-enxame.com/pt/javascript/mover-um-elemento-um-lugar-para-cima-ou-para-baixo-na-arvore-do-dom-com-javascript/822635469/
 // https://developer.mozilla.org/en-US/docs/Web/API/Node
-function capturaItemSelecionado() {
-  const itemSelecionado = document.querySelector('.selecionado');
-  return itemSelecionado;
-}
 
 function moverTarefaBaixo() {
   const itemSelecionado = capturaItemSelecionado();
