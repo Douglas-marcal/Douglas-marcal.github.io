@@ -17,11 +17,18 @@ html {
 
 header , nav {
   min-height: 8vh;
+}
+
+main , .greetings-container , footer , header , nav {
   min-width: 360px;
 }
 
 .bg-black {
   background-color: rgb(4, 4, 4);
+}
+
+.color-white {
+  color: rgb(250, 246, 246);
 }
 
 /* .flex {
@@ -34,16 +41,15 @@ header , nav {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgb(4, 4, 4);
-}
-
-header , #greeting {
-  color: rgb(250, 246, 246);
 }
 
 .nav-container {
   display: flex;
   align-items: center;
+  position: sticky;
+  top: 0;
+  box-shadow: 0 2px 2px  rgb(115, 225, 97);
+  z-index: 3;
 }
 
 .nav-bar {
@@ -54,42 +60,37 @@ header , #greeting {
 }
 
 nav ul li a {
-  background-color: rgb(250, 246, 246);
+  font-weight: 600;
   color: black;
+  background-color: rgb(250, 246, 246);
   border-radius: 5px;
   padding: .6rem;
   margin: 0 5px 0;
 }
 
-nav {
-  position: sticky;
-  top: 0;
-  box-shadow: 0 2px 2px  rgb(115, 225, 97);
-  z-index: 3;
-}
-
-.nav-bar li {
-  /* display: inline-block; */
-  border-radius: 6px;
-  font-weight: 600;
-}
-
-#greeting {
+.greetings-container {
   min-height: calc(100vh - 16vh);
   background-color: rgb(39, 41, 50);
-  font-size: 2em;
+  font-size: 2.5em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .photo-and-about {
   min-height: 100vh;
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
   background-color: rgb(4, 4, 4);
 }
 
 .photo-and-about a , .photo-and-about {
   color: rgb(250, 246, 246);
   font-weight: 600;
-  line-height: 20px;
+  line-height: 1.4rem;
 }
 
 .photo-and-about img {
