@@ -176,28 +176,37 @@ nav ul li a {
   justify-self: center;
 } */
 
-#projects {
-  min-height: 100vh;
-  background-color: rgb(4, 4, 4);
-  color: white;
-}
-
 .projects-container {
+  color: white;
+  background-color: rgb(4, 4, 4);
   min-height: 100vh;
   display: flex;
-  justify-content: center;
-  align-items: center;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.projects-pages {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  max-width: 390px;
+  flex-basis: 300px;
+  gap: 20px;
 }
 
 .pages-project img {
-  width: 150px;
+  width: 120px;
 }
 
-.pages-project {
+
+/* .pages-project {
   vertical-align: middle;
   margin: 20px;
-}
+} */
+
+
 
 #contacts {
   min-height: 100vh;
