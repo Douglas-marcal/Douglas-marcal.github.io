@@ -115,10 +115,6 @@ nav ul li a {
   font-size: 1.5rem;
 }
 
-/* .margin-50-auto {
-  margin: 50px auto;
-} */
-
 .techs {
   display: flex;
   justify-content: center;
@@ -147,34 +143,6 @@ nav ul li a {
   content: url(https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg);
   width: 120px;
 }
-
-/* 
-
-#projects div {
-  padding-top: 8vh;
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-}
-
-.pages-project {
-  width: fit-content;
-}
-
-.pages-project:hover {
-  box-shadow: 2px 5px 10px rgba(255, 255, 255, 0.562);
-}
-
-
-.pages {
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-}
-
-#projects p {
-  justify-self: center;
-} */
 
 .projects-container {
   color: white;
@@ -218,14 +186,6 @@ nav ul li a {
   justify-content: center;
   flex-wrap: wrap;
   gap: 40px;
-}
-
-/* #contacts h3 {
-  padding-top: 9vh;
-} */
-
-#social li {
-  /* padding-top: 30px; */
 }
 
 #github {
