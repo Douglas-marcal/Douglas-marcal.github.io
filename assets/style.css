@@ -120,7 +120,6 @@ nav ul li a {
   justify-content: center;
   max-width: 390px;
   flex-wrap: wrap;
-  flex-basis: 370px;
   gap: 1.6rem;
 }
 
@@ -160,7 +159,6 @@ nav ul li a {
   align-items: center;
   justify-content: center;
   max-width: 390px;
-  flex-basis: 300px;
   gap: 20px;
 }
 
@@ -180,7 +178,6 @@ nav ul li a {
 
 .social-media-container {
   max-width: 390px;
-  flex-basis: 300px;
   list-style-type: none;
   display: flex;
   justify-content: center;
