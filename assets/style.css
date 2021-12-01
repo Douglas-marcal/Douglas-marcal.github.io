@@ -64,7 +64,7 @@ nav ul li a {
   color: black;
   background-color: rgb(250, 246, 246);
   border-radius: 5px;
-  padding: .6rem;
+  padding: .4rem;
   margin: 0 5px 0;
 }
 
@@ -82,7 +82,7 @@ nav ul li a {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: flex-end;
   align-items: center;
   background-color: rgb(4, 4, 4);
 }
@@ -94,8 +94,8 @@ nav ul li a {
 }
 
 .photo-and-about img {
-  width: 200px;
-  padding: 100px 0 0 0;
+  min-width: 200px;
+  /* padding: 100px 0 0 0; */
 }
 
 .photo-and-about p {
