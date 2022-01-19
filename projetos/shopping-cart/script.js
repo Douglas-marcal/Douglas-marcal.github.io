@@ -1,5 +1,7 @@
 const cartItemsContainer = document.querySelector('.cart__items');
 const itemsContainer = document.querySelector('.items');
+const buttonSearch = document.querySelector('.button-search');
+const inputText = document.querySelector('.input-text');
 
 const createProductImageElement = (imageSource) => {
   const img = document.createElement('img');
@@ -123,17 +125,24 @@ const emptyCart = () => {
 };
 
 const searchProducts = () => {
-  const buttonSearch = document.querySelector('.button-search');
   buttonSearch.addEventListener('click', async () => {
-    const inputText = document.querySelector('.input-text');
     itemsContainer.innerHTML = '';
     dataFetchProducts(inputText.value);
     inputText.value = '';
   });
 };
 
+const searchProductsWithEnter = () => {
+  inputText.addEventListener('keydown', ({ key }) => {
+    if (key === 'Enter') {
+      buttonSearch.click();
+    }
+  });
+};
+
 window.onload = () => {
   searchProducts();
+  searchProductsWithEnter()
   dataFetchProducts();
   addCartItems();
   renderProductsLocalStorage();
