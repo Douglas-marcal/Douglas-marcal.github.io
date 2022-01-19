@@ -43,8 +43,8 @@ const sumOfTotalPrice = () => {
     const price = arrayStrings[arrayStrings.length - 1].slice(3).replace('.', '').replace(',', '.');
     console.log(price)
     return acc + +price;
-  }, 0);
-  displayTotalPrice.textContent = ` ${totalPrice.toLocaleString('pt-br', { style: 'currency', currency: 'BRL' })}`;
+  }, 0).toLocaleString('pt-br', { style: 'currency', currency: 'BRL' });
+  displayTotalPrice.textContent = ` ${totalPrice}`;
 };
 
 const onClickRemoveItem = ({ target }) => {

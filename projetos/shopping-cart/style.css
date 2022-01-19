@@ -138,6 +138,8 @@ body {
   height: 100vh;
   position: sticky;
   top: 0;
+  /* justify-content: center;
+  align-items: center; */
 }
 
 .cart .cart__items {
@@ -151,6 +153,12 @@ body {
   margin: 0 auto;
   border: 2px solid rgb(5, 52, 219);
   background-color: rgb(249, 249, 246);
+}
+
+.empty-cart-container {
+  position: fixed;
+  bottom: 10px;
+  align-self: center;
 }
 
 .item__price , .total-price-container {
