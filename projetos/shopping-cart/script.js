@@ -38,11 +38,13 @@ const sumOfTotalPrice = () => {
   const cartItems = Array.from(document.querySelectorAll('.cart__item'));
   const displayTotalPrice = document.querySelector('.total-price');
   const totalPrice = cartItems.reduce((acc, curr) => {
+    console.log(curr.textContent.split(' '))
     const arrayStrings = curr.textContent.split(' ');
-    const price = arrayStrings[arrayStrings.length - 1].slice(1);
+    const price = arrayStrings[arrayStrings.length - 1].slice(3).replace('.', '').replace(',', '.');
+    console.log(price)
     return acc + +price;
   }, 0);
-  displayTotalPrice.textContent = `${totalPrice}`;
+  displayTotalPrice.textContent = ` ${totalPrice.toLocaleString('pt-br', { style: 'currency', currency: 'BRL' })}`;
 };
 
 const onClickRemoveItem = ({ target }) => {
@@ -65,7 +67,7 @@ const createCartItemElement = ({ sku, name, salePrice }) => {
 
 NAME: ${name} | 
 
-PRICE: $${salePrice}
+PRICE: ${salePrice}
 `;
   li.addEventListener('click', cartItemClickListener);
   return li;
@@ -89,7 +91,7 @@ const dataFetchProducts = async (item = 'computador') => {
   removeLoading();
   results.forEach(({ id: sku, title: name, thumbnail, price }) => {
     const image = thumbnail.replace('I', 'W');
-    const priceFormated = `R$ ${price}`;
+    const priceFormated = price.toLocaleString('pt-br', { style: 'currency', currency: 'BRL' })
     const sectionProduct = createProductItemElement({ sku, name, image, priceFormated });
     itemsContainer.appendChild(sectionProduct);
   });
@@ -99,7 +101,8 @@ const addCartItems = () => {
   itemsContainer.addEventListener('click', async ({ target }) => {
     if (target.className === 'item__add') {
       const productID = getSkuFromProductItem(target.parentNode);
-      const { id: sku, title: name, price: salePrice } = await fetchItem(productID);
+      const { id: sku, title: name, price } = await fetchItem(productID);
+      const salePrice = price.toLocaleString('pt-br', { style: 'currency', currency: 'BRL' })
       const listItem = createCartItemElement({ sku, name, salePrice });
       cartItemsContainer.appendChild(listItem);
       const valueToSaveLocalStorage = cartItemsContainer.innerHTML;
