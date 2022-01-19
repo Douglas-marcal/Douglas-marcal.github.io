@@ -142,7 +142,7 @@ const searchProductsWithEnter = () => {
 
 window.onload = () => {
   searchProducts();
-  searchProductsWithEnter()
+  searchProductsWithEnter();
   dataFetchProducts();
   addCartItems();
   renderProductsLocalStorage();
