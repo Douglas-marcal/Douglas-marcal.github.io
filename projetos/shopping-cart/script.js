@@ -38,10 +38,8 @@ const sumOfTotalPrice = () => {
   const cartItems = Array.from(document.querySelectorAll('.cart__item'));
   const displayTotalPrice = document.querySelector('.total-price');
   const totalPrice = cartItems.reduce((acc, curr) => {
-    console.log(curr.textContent.split(' '))
     const arrayStrings = curr.textContent.split(' ');
     const price = arrayStrings[arrayStrings.length - 1].slice(3).replace('.', '').replace(',', '.');
-    console.log(price)
     return acc + +price;
   }, 0).toLocaleString('pt-br', { style: 'currency', currency: 'BRL' });
   displayTotalPrice.textContent = ` ${totalPrice}`;
