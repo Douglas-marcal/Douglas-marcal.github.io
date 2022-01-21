@@ -1,3 +1,8 @@
+import fetchItem from './helpers/fetchItem.js';
+import fetchProducts from './helpers/fetchProducts.js';
+import saveCartItems from './helpers/saveCartItems.js';
+import getSavedCartItems from './helpers/getSavedCartItems.js';
+
 const cartItemsContainer = document.querySelector('.cart__items');
 const itemsContainer = document.querySelector('.items');
 const buttonSearch = document.querySelector('.button-search');

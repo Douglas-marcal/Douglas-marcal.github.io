@@ -1,0 +1,28 @@
+{
+  "name": "douglas-marcal.github.io",
+  "version": "1.0.0",
+  "description": "### You can access _[here.](https://douglas-marcal.github.io/)_",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Douglas-marcal/Douglas-marcal.github.io.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Douglas-marcal/Douglas-marcal.github.io/issues"
+  },
+  "homepage": "https://github.com/Douglas-marcal/Douglas-marcal.github.io#readme",
+  "devDependencies": {
+    "eslint": "^8.7.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.25.4"
+  },
+  "dependencies": {
+    "eslint-config-trybe-fundamentals": "^1.1.1"
+  }
+}

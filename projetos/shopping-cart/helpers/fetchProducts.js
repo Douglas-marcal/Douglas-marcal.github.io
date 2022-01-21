@@ -7,8 +7,4 @@ const fetchProducts = (endpoint) => {
     .catch((error) => error);
 };
 
-if (typeof module !== 'undefined') {
-  module.exports = {
-    fetchProducts,
-  };
-}
+export default fetchProducts;
